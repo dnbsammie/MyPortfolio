@@ -9,9 +9,10 @@ html {
 }
 
 body {
-    font-family: Raleway;
-    line-height: 1.6;
-    color: #00040d;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #e6e6e7;
+    background-color: #00040d;
 }
 
 body::-webkit-scrollbar {
@@ -26,18 +27,17 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: #e6e6e7;
 }
-
 /* Header */
 header {
-    background: transparent;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    padding: 10px 20px;
     z-index: 1000;
+    text-align: center;
+    background: transparent;
+    color: #ffffff;
 }
 
 header::before {
@@ -48,7 +48,7 @@ header::before {
     width: 100%;
     height: 100%;
     background: #00040d;
-    opacity: 0.1;
+    opacity: 0.5;
     z-index: -1;
 }
 
@@ -59,10 +59,6 @@ header nav ul {
     z-index: 1;
 }
 
-header nav ul {
-    list-style: none;
-}
-
 header nav ul li {
     display: inline;
     margin: 0 15px;
@@ -71,23 +67,17 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: auto;
+    font-size: 1.1rem;
 }
 
 header nav ul li a:hover {
-    color: #ff3f34;
+    color: #808286;
     transform: scale(1.1);
 }
 
-header h1 {
-    margin: 0.5rem 0;
-}
-
-/* home & main page */
-.color-accent {
-    color: #ff3f34;
-}
-
-#home {
+/*Content Row*/
+main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,165 +92,115 @@ header h1 {
     background-position: center center;
 
 }
-
-/* Neon Button */
-.promo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    margin: auto;
-    position: relative;
-    z-index: 2;
+main h1{
+    font-size:5.0rem;
 }
-
-.promo h1 {
-    font-size: 3.5rem;
-    text-align: center;
-    color: #fff8e1;
-    font-weight: 700;
-}
-
-.promo p {
-    font-family: raleway thin;
+main h3{
     font-size: 2.5rem;
-    text-align: center;
-    color: #fff8e1;
-    font-weight: 900;
+    font-family: raleway dots;
 }
-
-.btn-neon {
-    margin: 0;
-    padding-bottom: 10;
+main p{
+    font-size: 1.5rem;
+    font-family: Raleway dots;
+}
+section {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15px;
-    background: #ff9800;
-    font-family: raleway thin;
+    padding: 20px;
 }
 
-.btn-neon {
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: #fff8e1;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: medium;
-    overflow: hidden;
-    transition: 0.2s;
+.content {
+    text-align: center;
 }
 
-.btn-neon:hover {
-    background: #f57c00;
-    box-shadow: 0 0 10px #bc5100, 0 0 40px #e65100, 0 0 80px #ef6c00;
-    transition-delay: 1s;
-}
-
-.btn-neon span {
-    position: absolute;
-    display: block;
-}
-
-#span1 {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #bc5100);
-}
-
-.btn-neon:hover #span1 {
-    left: 100%;
-    transition: 1s;
-}
-
-#span2 {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #e65100);
-}
-
-#span3 {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #ef6c00);
-}
-
-.btn-neon:hover #span3 {
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-}
-
-.btn-neon:hover #span2 {
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-
-#span4 {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #fff8e1);
-}
-
-.btn-neon:hover #span4 {
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
-}
-
-/*Content Row*/
 #about {
-    min-height: 100vh;
-    background-color: #33363d;
+    background-color: #000000;
 }
 
 #skills {
-    min-height: 100vh;
-    background-color: #1a1d25;
+    background-color: #33363d;
+    display: flex;
 }
 
 #projects {
-    min-height: 100vh;
-    background-color: #33363d;
-}
-
-.project {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border: 1px solid #e6e6e7;
-    border-radius: 5px;
+    background-color: #4d4f56;
 }
 
 #contact {
-    background-color: #cccdcf;
-    min-height: 70vh;
+    background-color: #00040d;
 }
 
-/* button */
-button {
-    font-size: 1.25em;
-    font-weight: thin;
-    padding: 10px 30px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grid li {
+    background-color: #808286;
+    padding: 10px;
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    color: #e6e6e7;
-    background-color: #ff3f34;
 }
 
-button:hover {
-    background-color: #ff3f34;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #999b9e;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b3b4b6;
+    color: #00040d;
+}
+
+form button {
+    padding: 10px;
+    background-color: #cccdcf;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #00040d;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e6e6e7;
 }
 
 /* Footer */
@@ -279,8 +219,7 @@ footer {
     text-align: center;
 }
 
-.footer-content h3 {
-    font-size: 1.8rem;
+.footer-content h4 {
     font-weight: 400;
     text-transform: capitalize;
     line-height: 3rem;
@@ -410,7 +349,7 @@ footer {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     header nav ul {
         text-align: center;
     }
@@ -424,8 +363,7 @@ footer {
         margin: 0.5rem 0;
     }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 450px) {
     section {
         padding: 1rem;
         margin: 0.5rem 0;
