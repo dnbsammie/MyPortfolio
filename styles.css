@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Raleway;
+    line-height: 1.6;
+    color: #00040d;
+}
+
+body::-webkit-scrollbar {
+    background-color: #00040d;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #1a1d25;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #e6e6e7;
+}
+
+/* Header */
+header {
+    background: transparent;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00040d;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #ff3f34;
+    transform: scale(1.1);
+}
+
+header h1 {
+    margin: 0.5rem 0;
+}
+
+/* home & main page */
+.color-accent {
+    color: #ff3f34;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(0deg,
+            rgba(1, 0, 0, 0.9),
+            rgba(1, 0, 0, 0.6)), url("Resources/MID.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+/* Neon Button */
+.promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.promo h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #fff8e1;
+    font-weight: 700;
+}
+
+.promo p {
+    font-family: raleway thin;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff8e1;
+    font-weight: 900;
+}
+
+.btn-neon {
+    margin: 0;
+    padding-bottom: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    background: #ff9800;
+    font-family: raleway thin;
+}
+
+.btn-neon {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff8e1;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: medium;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.btn-neon:hover {
+    background: #f57c00;
+    box-shadow: 0 0 10px #bc5100, 0 0 40px #e65100, 0 0 80px #ef6c00;
+    transition-delay: 1s;
+}
+
+.btn-neon span {
+    position: absolute;
+    display: block;
+}
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #bc5100);
+}
+
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #e65100);
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ef6c00);
+}
+
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff8e1);
+}
+
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/*Content Row*/
+#about {
+    min-height: 100vh;
+    background-color: #33363d;
+}
+
+#skills {
+    min-height: 100vh;
+    background-color: #1a1d25;
+}
+
+#projects {
+    min-height: 100vh;
+    background-color: #33363d;
+}
+
+.project {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e6e6e7;
+    border-radius: 5px;
+}
+
+#contact {
+    background-color: #cccdcf;
+    min-height: 70vh;
+}
+
+/* button */
+button {
+    font-size: 1.25em;
+    font-weight: thin;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: #e6e6e7;
+    background-color: #ff3f34;
+}
+
+button:hover {
+    background-color: #ff3f34;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1d25;
+    font-family: Raleway light;
+    padding-top: 40px;
+    color: #e6e6e7;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #e6e6e7;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: #ff3f34;
+}
+
+.footer-bottom {
+    background: #00040d;
+    width: 100%;
+    padding: 1px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: Raleway dots;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* Font Awesome Icons config*/
+.fa {
+    padding-right: 20px;
+    /* Preset stats */
+    padding: 12px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: #00040d;
+    color: #e6e6e7;
+}
+
+.fa-instagram:hover {
+    background-image:
+        radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+}
+
+/* Github */
+.fa-github {
+    background: #00040d;
+    color: #e6e6e7;
+}
+
+.fa-github:hover {
+    background-image:
+        radial-gradient(circle at 50% 50%,
+            #00c853 0%, #00c853 5%,
+            #00c853 45%, #00e676 60%,
+            #69f0ae 90%);
+    color: black;
+}
+
+/* Linkedin */
+.fa-linkedin {
+    background: #00040d;
+    color: #e6e6e7;
+}
+
+.fa-linkedin:hover {
+    background-image:
+        radial-gradient(circle at 50% 50%,
+            #cccccc 0%, #fafafa 5%,
+            #ffffff 45%, #f2f2f2 60%,
+            #ffffff 90%);
+    color: #007bb5;
+}
+
+/* Youtube */
+.fa-youtube {
+    background: #00040d;
+    color: #e6e6e7;
+}
+
+.fa-youtube:hover {
+    background-image:
+        radial-gradient(circle at 50% 50%,
+            #ff0000 0%, #ff0000 5%,
+            #ff0000 45%, #ff0000 60%,
+            #ff0000 90%);
+    color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        /*display: block;*/
+        margin: 0.5rem 0;
+    }
+
+    .project {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
