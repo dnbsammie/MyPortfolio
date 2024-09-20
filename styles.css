@@ -1,0 +1,517 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #26a69a;
+    --tertiary-color: #000000;
+    --font-main: 'CODE', Bold;
+    --font-second: 'CODE', Light;
+    --font-third: 'Raleway';
+    --font-fourth: Raleway dots;
+    --h1-size: 10vh;
+    --h2-size: 7.5vh;
+    --h3-size: 5vh;
+    --h4-size: 2.5vh;
+    --p-size: 1.5vh;
+    --ul-size: 2vh;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: var(--h1-size);
+    font-family: var(--font-main);
+    font-style: bold;
+}
+
+h2 {
+    font-size: var(--h2-size);
+    font-family: var(--font-main);
+    font-style: bold;
+}
+
+h3 {
+    font-size: var(--h3-size);
+    font-family: var(--font-second);
+}
+
+h4 {
+    font-size: var(--h4-size);
+    font-family: var(--font-second);
+}
+
+p {
+    font-size: var(--p-size);
+    font-family: var(--font-third);
+}
+
+ul {
+    font-size: var(--ul-size);
+    font-family: var(--font-fourth);
+}
+
+body {
+    min-height: 90vh;
+    color: var(--primary-color);
+    background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #111111;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+section {
+    height: 100vh;
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px;
+}
+
+/*Hone*/
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-container h1 {
+    text-align: left;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.left-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*Experience & Projects*/
+#experience {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#experience h2 {
+    object-fit: contain;
+}
+
+.project-1 {
+    width: 100%;
+}
+
+.project-2 {
+    width: 100%;
+}
+
+.project-1 img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-2 img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.project-3 img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-4 img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-info {
+    display: flex;
+    margin: auto;
+    object-fit: contain;
+
+}
+
+.text-content {
+    padding-left: 15px;
+}
+
+/*About*/
+#about {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.boutext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boutext h3 {
+    text-align: left;
+    width: 100%;
+}
+
+.boutimg {
+    width: 100%;
+    height: 100%;
+}
+
+.boutimg img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*Skills*/
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.education img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.abilities img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+#skills ul {
+    list-style-position: inside;
+    padding-bottom: 15px;
+}
+
+/*Contact*/
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.data h1{
+    max-width: 550px;
+}
+
+#cnt-img{
+    position: relative;
+}
+
+.directions a{
+    font-size: var(--h4-size);
+    font-family: var(--font-fourth);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#cnt-img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+#contact ul {
+    list-style: none;
+}
+
+/* Icons config*/
+.socials {
+    margin-top: 25%;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.socials li {
+    margin: auto;
+}
+
+.socials a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--tertiary-color);
+}
+
+.socials a i {
+    font-size: var(--h1-size);
+    transition: color .4s ease;
+}
+
+.fa {
+    padding-right: 20px;
+    /* Preset stats */
+    padding: 15px 30px;
+    font-size: 45px;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.fa-instagram:hover {
+    background-image:
+        radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    color: #ffffff;
+}
+
+/* Github */
+.fa-github {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.fa-github:hover {
+    background-image:
+        radial-gradient(circle at 50% 50%,
+            #9032ad 0%, #9032ad 5%,
+            #782f9e 45%, #662c92 60%,
+            #52287a 90%);
+    color: #ffffff;
+}
+
+/* Linkedin */
+.fa-linkedin {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.fa-linkedin:hover {
+    background-image:
+        radial-gradient(circle at 50% 50%,
+            #007bb5 0%, #007bb5 5%,
+            #007bb5 45%, #007bb5 60%,
+            #007bb5 90%);
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    /*Navbar*/
+
+    /*Hone*/
+    #home {
+        flex-direction: row;
+    }
+
+    .left-container {
+        width: 60%;
+    }
+
+    .right-container {
+        width: 35%;
+    }
+
+    /*Experience & Projects*/
+    #experience {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #experience h2 {
+        font-size: var(--h1-size);
+        padding-bottom: auto;
+    }
+
+    .project-1 {
+        width: 65%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .project-2 {
+        width: 30%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .project-1 img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-2 img {
+        aspect-ratio: 9/17;
+    }
+
+    #projects {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .project-3 {
+        width: 35%;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .project-4 {
+        width: 65%;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .project-3 img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .project-4 img {
+        aspect-ratio: 4 / 3;
+    }
+
+    /*About*/
+    #about {
+        flex-direction: row;
+        text-align: justify;
+    }
+
+    .boutext {
+        width: 55%;
+    }
+
+    .boutimg {
+        width: 40%;
+    }
+
+    .boutimg img {
+        height: 100%;
+        aspect-ratio: 10 / 16;
+    }
+
+    /*Skills*/
+    #skills {
+        flex-direction: row;
+        text-align: justify;
+    }
+
+    .education {
+        width: 45%;
+    }
+
+    .abilities {
+        width: 45%;
+    }
+
+    .education img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .abilities img {
+        aspect-ratio: 1 / 1;
+    }
+
+    /*Contact*/
+    #contact {
+        flex-direction: row;
+    }
+
+    .data h1{
+        max-width: 550px;
+    }
+    .data {
+        width: 30%;
+    }
+
+    .socials{
+        max-width: 400px;
+    }
+    
+    #cnt-img{
+        width: 50%;
+    }
+    #cnt-img img {
+        height: 100%;
+    }
+}
