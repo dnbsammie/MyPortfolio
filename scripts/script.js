@@ -4,22 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectTitle = document.getElementById("project-title");
     const projectDescription = document.getElementById("project-description");
 
-    updateTextInfo({ number: "00", title: "CHOOSE", description: "A project." });
+    function activateProject(img) {
+        images.forEach((img) => {
+            img.style.width = "0px";
+            img.style.opacity = ".9";
+            img.style.filter = "grayscale(90%)";
+        });
+
+        img.style.width = "25%";
+        img.style.opacity = "1";
+        img.style.filter = "contrast(125%)";
+
+        const info = JSON.parse(img.getAttribute("data-info"));
+        updateTextInfo(info);
+    }
+
+    activateProject(images[0]);
 
     images.forEach((img) => {
         img.addEventListener("click", () => {
-            images.forEach((img) => {
-                img.style.width = "0px";
-                img.style.opacity = ".9";
-                img.style.filter = "grayscale(90%)";
-            });
-
-            img.style.width = "25%";
-            img.style.opacity = "1";
-            img.style.filter = "contrast(125%)";
-
-            const info = JSON.parse(img.getAttribute("data-info"));
-            updateTextInfo(info);
+            activateProject(img);
         });
     });
 
