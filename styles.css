@@ -1,9 +1,9 @@
 :root {
     --color-w: #ffffff;
-    --color-g: #777777;
+    --color-g: #4d4d4d;
     --color-b: #000000;
-    --color-l: #ffb74d;
-    --color-o: #ff7f00;
+    --color-p: #ff7f00;
+    --color-l: #ffb266;
     --font-1: 'CODE', Bold;
     --font-2: 'CODE', Light;
     --font-3: 'Open Sauce Sans', 'Open Sauce Sans Regular', sans-serif;
@@ -64,11 +64,11 @@ hr {
 }
 
 body {
-    background-color: var(--color-b);
+    background: linear-gradient(270deg, #3b3b3b, #4d4d4d, #6b6b6b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
     min-height: 90vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: -101;
 }
 
 body::-webkit-scrollbar {
@@ -81,7 +81,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: var(--color-o);
+    background: var(--color-p);
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    /* Asegura que el canvas esté detrás */
 }
 
 header {
@@ -89,10 +99,11 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     height: 50px;
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +127,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--color-g);
+    color: var(--color-l);
     transform: scale(1.1);
     transition: all 0.25s;
 }
@@ -125,7 +136,7 @@ nav a:hover {
 section {
     height: 100vh;
     margin: auto;
-    padding: 50px;
+    padding: 60px;
 }
 
 hr {
@@ -137,7 +148,7 @@ hr {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1366px;
     margin: auto;
 }
 
@@ -146,10 +157,10 @@ hr {
     justify-content: center;
     align-items: center;
     background-image:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),
-        url('./assets/bg-home.jpg');
+        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
     filter: contrast(125%);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -169,7 +180,7 @@ hr {
 }
 
 #about hr {
-    background: var(--color-o);
+    background: var(--color-p);
     margin: auto;
 }
 
@@ -180,14 +191,18 @@ hr {
 .boutimg img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
 }
 
-.boutext h3 {
+.boutext h2 {
     font-size: 4vh;
+}
+
+.boutext {
+    font-size: 0.5vh;
 }
 
 .boutext {
@@ -197,25 +212,19 @@ hr {
 }
 
 .skill {
-    margin-bottom: 15px;
+    max-width: auto;
+    max-height: 80px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
+    margin-bottom: 2.5px;
 }
 
 .skill h4 {
+    color: var(--color-w);
     text-align: center;
-    margin-bottom: 10px;
 }
 
-/*
-.skill {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--color-g);
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-*/
 .progress-bar {
     background: var(--color-l);
     border-radius: 5px;
@@ -224,7 +233,7 @@ hr {
 
 .progress {
     height: 20px;
-    background: var(--color-o);
+    background: var(--color-p);
     border-radius: 5px;
     transition: width 0.3s ease;
 }
@@ -235,11 +244,10 @@ hr {
     flex-direction: column;
     align-items: flex-start;
     background-image:
-        linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 5)),
-        url('./assets/bg-projects.png');
+        linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 5));
     background-size: cover;
     background-position: center;
-    color: var(--color-o);
+    color: var(--color-p);
 }
 
 .p-text {
@@ -251,7 +259,7 @@ hr {
 }
 
 #projects hr {
-    background: var(--color-o);
+    background: var(--color-p);
 }
 
 .gallery {
@@ -259,9 +267,11 @@ hr {
     width: 100%;
     height: 50%;
     animation: slideInUp 2.0s forwards;
+    gap: 10px;
 }
 
 .gallery img {
+    border-radius: 5px;
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
@@ -292,7 +302,8 @@ hr {
     flex-direction: column;
     align-self: flex-start;
     justify-content: space-between;
-    background-color: var(--color-o);
+    background-color: var(--color-p);
+    color: var(--color-b);
 }
 
 #contact hr {
@@ -301,17 +312,17 @@ hr {
     margin-bottom: 15px;
 }
 
-#contact img {
+.photo-container {
+    animation: slideInUp 2.0s forwards;
+}
+
+.photo-container img{
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
-}
-
-.photo-container {
-    animation: slideInUp 2.0s forwards;
 }
 
 .info-container {
@@ -322,8 +333,8 @@ hr {
 .others a {
     display: flex;
     flex-direction: column;
-    padding: 15px 0px;
-    font-size: var(--h4-size);
+    padding: 5px 0px;
+    font-size: 1.5vh;
     color: var(--color-b);
     font-family: var(--font-3);
     text-decoration: none;
@@ -331,7 +342,6 @@ hr {
 
 /* Icons config*/
 .socials {
-
     width: 100%;
     height: auto;
     list-style: none;
@@ -347,7 +357,7 @@ hr {
 .socials a {
     text-decoration: none;
     list-style: none;
-    color: var(--color-o);
+    color: var(--color-p);
 }
 
 .socials a i {
@@ -356,10 +366,10 @@ hr {
 }
 
 .fa {
-    padding-right: 20px;
+    padding-right: 10px;
     /* Preset stats */
-    padding: 15px 30px;
-    font-size: 45px;
+    padding: 10px 25px;
+    font-size: 25px;
     width: fit-content;
     text-align: center;
     text-decoration: none;
@@ -428,30 +438,46 @@ hr {
 
     /*About*/
     #about {
+        align-items: center;
+    }
+
+    #about .container {
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .boutimg {
         margin: auto;
-        width: 40%;
+        width: 35%;
     }
 
     .boutimg img {
         margin: auto;
+        height: 100%;
         align-items: center;
-        width: 70%;
-        height: auto;
         aspect-ratio: 3/4;
-
     }
 
-    .boutext h3 {
-        font-size: var(--h3-size);
+    .boutext h2 {
+        font-size: var(--h2-size);
+    }
+
+    .boutext p {
+        font-size: var(--p-size);
     }
 
     .boutext {
-        margin: auto;
-        width: 40%;
+        padding: auto;
+        width: 50%;
+    }
+
+    .skill {
+        margin: 20px;
+    }
+
+    .skill h4{
+        padding: 5px;
     }
 
     /*Experience & Projects*/
@@ -466,12 +492,18 @@ hr {
 
     .gallery {
         width: 100%;
-        height: 430px;
+        height: 375px;
     }
 
     /*Contact*/
     #contact {
         align-items: center;
+    }
+
+    #contact .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     #contact h3 {
@@ -487,30 +519,36 @@ hr {
         font-size: 2.5vh;
     }
 
-    #contact .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     .photo-container {
-        width: 45%;
+        margin: auto;
+        width: 35%;
     }
 
     .photo-container img {
-        aspect-ratio: 3/4;
-        width: 75%;
-        height: auto;
         margin: auto;
+        height: 100%;
+        align-items: center;
+        aspect-ratio: 3/4;  
     }
 
     .info-container {
         padding: auto;
-        width: 45%;
+        width: 50%;
     }
 
     .others a {
         font-size: var(--h3-size);
+        padding: 20px 0px;
+    }
+
+    .fa {
+        padding-right: 20px;
+        /* Preset stats */
+        padding: 15px 30px;
+        font-size: 45px;
+        width: fit-content;
+        text-align: center;
+        text-decoration: none;
     }
 }
 
@@ -523,5 +561,17 @@ hr {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
